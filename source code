@@ -1,0 +1,29 @@
+//write a code to initialize the principle diagnol of a 3x3 matrix
+#include <stdio.h>
+
+int main() {
+    int matrix[3][3];
+    
+    // Initialize the matrix
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            matrix[i][j] = 0; // Initialize all elements to 0
+        }
+    }
+
+    // Initialize the principal diagonal
+    for (int i = 0; i < 3; i++) {
+        matrix[i][i] = 1; // Set the diagonal element to 1
+    }
+
+    // Print the matrix
+    printf("The matrix with initialized principal diagonal is:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
